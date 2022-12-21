@@ -27,7 +27,10 @@ export default function Navbar() {
   }, []);
 
   return (
-    <Disclosure as="nav" className="w-full sticky bg-primaryBg top-0 border-b-2 shadow-b-md z-10 border-bg-primaryTextColor">
+    <Disclosure
+      as="nav"
+      className="w-full sticky bg-primaryBg top-0 border-b-2 drop-shadow-md z-10 border-neutralBg border-opacity-50 my-2"
+    >
       <div className="mx-auto max-w-4xl px-4 lg:px-6">
         <div className="relative flex h-16 items-center justify-center">
           {/* Links */}

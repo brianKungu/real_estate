@@ -1,7 +1,6 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import { Carousel } from "antd";
-import Image from 'next/image';
+import Image from "next/image";
 
 const images = [
   {
@@ -26,14 +25,16 @@ const images = [
 
 export default function Header() {
   return (
-    <div className="my-4">
+    <div className="my-4 px-2 sm:px-2 md:px-4 lg:px-4">
       <Carousel autoplay>
         {images.map((image) => (
-          <div key={image.imageID}>
-            <img
+          <div key={image.imageID} className="relative md:h-[500px] w-full h-[300px]">
+            <Image
               src={image.imageSrc}
-              className="block w-full rounded-lg h-[500px]"
+              className="block w-full rounded-lg"
               alt={image.imageAlt}
+              fill
+              style={{ objectFit: "cover" }}
             />
           </div>
         ))}
