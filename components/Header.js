@@ -35,6 +35,7 @@ export default function Header() {
               alt={image.imageAlt}
               fill
               style={{ objectFit: "cover" }}
+              priority
             />
           </div>
         ))}

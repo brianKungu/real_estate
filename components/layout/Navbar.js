@@ -1,13 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Disclosure } from "@headlessui/react";
-import { useLocation } from "react-router-dom";
 import { useRouter } from "next/router";
 import Link from "next/link";
-const navigation = [
-  { name: "Home", href: "/", current: true },
-  { name: "Property List", href: "/propertyList", current: false },
-  { name: "About", href: "/about", current: false },
-];
 
 export default function Navbar() {
   const [activeTab, setActiveTab] = useState("Home");
@@ -29,13 +23,13 @@ export default function Navbar() {
   return (
     <Disclosure
       as="nav"
-      className="w-full sticky bg-primaryBg top-0 border-b-2 drop-shadow-md z-10 border-neutralBg border-opacity-50 my-2"
+      className="sticky top-0 z-10 w-full my-4 border-b-2 border-opacity-50 bg-primaryBg drop-shadow-md border-neutralBg"
     >
-      <div className="mx-auto max-w-4xl px-4 lg:px-6">
-        <div className="relative flex h-16 items-center justify-center">
+      <div className="max-w-4xl px-4 mx-auto lg:px-6">
+        <div className="relative flex items-center justify-center h-16">
           {/* Links */}
-          <div className="w-full flex flex-grow items-center justify-center">
-            <div className="flex justify-evenly items-center">
+          <div className="flex items-center justify-center flex-grow w-full">
+            <div className="flex items-center justify-evenly">
               <Link
                 href="/"
                 className={activeTab === "Home" ? activeLink : innactiveLink}
