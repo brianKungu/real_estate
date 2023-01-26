@@ -1,18 +1,18 @@
 import React from "react";
 import { FiFacebook } from "react-icons/fi";
-import { Meta } from "../components";
+import { BackButton, Meta } from "../components";
 import { FaTwitter, FaWhatsapp } from "react-icons/fa";
 import { BsInstagram } from "react-icons/bs";
 
 export default function about() {
   return (
-    <>
+    <div className="px-4 my-4">
       <Meta
         title="About Page"
         description="A brief description of who I am and what I do"
       />
-
-      <div className="grid gap-4 px-4 my-8 md:grid-cols-2 grid-row-2">
+      <BackButton />
+      <div className="grid gap-4  md:grid-cols-2 grid-row-2">
         <div className="my-auto">
           <h1 className="text-4xl font-bold md:text-5xl">
             Hi, I`m Charles Kiprono, <br />A real estate agent
@@ -54,6 +54,6 @@ export default function about() {
           />
         </div>
       </div>
-    </>
+    </div>
   );
 }

@@ -7,9 +7,9 @@ export default function Navbar() {
   const [activeTab, setActiveTab] = useState("Home");
   const location = useRouter();
   const activeLink =
-    "bg-secondaryBg text-primaryTextColor px-3 py-2 rounded-md text-base font-medium mr-4";
+    "bg-secondaryBg text-primaryTextColor px-3 py-2 rounded-md text-base font-medium mr-4 text-center";
   const innactiveLink =
-    "text-secondaryTextColor hover:bg-neutralBg hover:text-primaryTextColor px-3 py-2 rounded-md text-base font-medium mr-4";
+    "text-secondaryTextColor hover:bg-neutralBg hover:text-primaryTextColor px-3 py-2 rounded-md text-base font-medium mr-4 text-center";
   useEffect(() => {
     if (location.asPath === "/") {
       setActiveTab("Home");
@@ -18,7 +18,7 @@ export default function Navbar() {
     } else if (location.asPath === "/about") {
       setActiveTab("about");
     }
-  }, []);
+  });
 
   return (
     <Disclosure
@@ -29,7 +29,7 @@ export default function Navbar() {
         <div className="relative flex items-center justify-center h-16">
           {/* Links */}
           <div className="flex items-center justify-center flex-grow w-full">
-            <div className="flex items-center justify-evenly">
+            <div className="flex items-center justify-center text-center w-full">
               <Link
                 href="/"
                 className={activeTab === "Home" ? activeLink : innactiveLink}
