@@ -39,9 +39,9 @@ export default function Footer() {
           </p>
         </div>
       </div>
-      <span class="block text-sm text-neutralTextColor text-center md:text-left dark:text-neutralTextColor mt-4">
+      <span className="block mt-4 text-sm text-center text-neutralTextColor md:text-left dark:text-neutralTextColor">
         ©{" "}
-        <a href="https://flowbite.com/" class="hover:underline">
+        <a href="https://flowbite.com/" className="hover:underline">
           Allied Properties
         </a>
         . All Rights Reserved.2023

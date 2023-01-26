@@ -25,7 +25,7 @@ const images = [
 
 export default function Header() {
   return (
-    <div className="my-4 px-2 sm:px-2 md:px-4 lg:px-4">
+    <div className="px-2 my-8 sm:px-2 md:px-4 lg:px-4">
       <Carousel autoplay>
         {images.map((image) => (
           <div key={image.imageID} className="relative md:h-[500px] w-full h-[300px]">
