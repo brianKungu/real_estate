@@ -8,6 +8,7 @@ import SecondaryPill from "../components/SecondaryPill";
 import PropertyCards from "../components/PropertyCards";
 import PropertyCard from "../components/PropertyCard";
 import FeaturedProperties from "../components/FeaturedProperties";
+import Tabs from "../components/Tabs";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,6 +19,7 @@ export default function Home() {
       <Header />
       <PropertyCards />
       <FeaturedProperties />
+      <Tabs />
     </>
   );
 }
