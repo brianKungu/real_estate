@@ -1,9 +1,19 @@
 import React from "react";
+import { useForm } from "react-hook-form";
 
 export default function Form() {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+  const onSubmit = (data) => console.log(data);
   return (
     <div className="my-4">
-      <form className="shadow-md shadow-yellow-200 border p-4 border-yellow-200/80 rounded-md">
+      <form
+        className="shadow-md shadow-yellow-200 border p-4 border-yellow-200/80 rounded-md"
+        onSubmit={handleSubmit(onSubmit)}
+      >
         <div class="mb-6">
           <label
             for="fullName"
@@ -12,27 +22,40 @@ export default function Form() {
             Full Name
           </label>
           <input
+            {...register("fullName", {
+              required: "Please Enter your Full Name",
+              minLength: { value: 8, message: "Full Name is too short!" },
+            })}
             type="text"
-            id="repeat-password"
-            className="shadow-sm bg-transparent border border-neutralTextColor text-secondaryTextColor text-sm rounded-lg focus:ring-secondaryBg focus:border-secondaryBg block w-full p-2.5 dark:bg-transparent dark:border-secondaryTextColor dark:placeholder-neutralTextColor dark:text-neutralTextColor dark:focus:ring-secondaryBg dark:focus:border-secondaryBg dark:shadow-sm-dark"
-            required
+            name="fullName"
+            className="shadow-sm bg-primaryBg border border-neutralTextColor text-secondaryTextColor text-sm rounded-lg focus:ring-secondaryBg focus:border-secondaryBg block w-full p-2.5 dark:bg-primaryBg dark:border-secondaryTextColor dark:placeholder-neutralTextColor dark:text-neutralTextColor dark:focus:ring-secondaryBg dark:focus:border-secondaryBg dark:shadow-sm-dark"
             placeholder="Sony Bravia"
           />
+          {errors.fullName && (
+            <p className="text-red-500">{errors.fullName.message}</p>
+          )}
         </div>
+
         <div className="mb-6">
           <label
-            for="password"
-            className="block mb-2 text-sm font-medium text-gsecondaryTextColor dark:text-secondaryTextColor"
+            for="phoneNumber"
+            className="block mb-2 text-sm font-medium text-secondaryTextColor dark:text-secondaryTextColor"
           >
             Phone number
           </label>
           <input
+            {...register("phoneNumber", {
+              required: "Please enter your phone number!",
+              minLength: { value: 10, message: "Phone Number is too short!" },
+            })}
             type="number"
-            id="repeat-password"
+            name="phoneNumber"
             className="shadow-sm bg-transparent border border-neutralTextColor text-secondaryTextColor text-sm rounded-lg focus:ring-secondaryBg focus:border-secondaryBg block w-full p-2.5 dark:bg-transparent dark:border-secondaryTextColor dark:placeholder-neutralTextColor dark:text-neutralTextColor dark:focus:ring-secondaryBg dark:focus:border-secondaryBg dark:shadow-sm-dark"
-            required
             placeholder="0722000000"
           />
+          {errors.phoneNumber && (
+            <p className="text-red-500">{errors.phoneNumber.message}</p>
+          )}
         </div>
         <div className="mb-6">
           <label
@@ -42,12 +65,17 @@ export default function Form() {
             Email Address
           </label>
           <input
+            {...register("email", {
+              required: "Please enter your Email Address!",
+            })}
             type="email"
-            id="email"
+            name="email"
             className="shadow-sm bg-transparent border border-neutralTextColor text-secondaryTextColor text-sm rounded-lg focus:ring-secondaryBg focus:border-secondaryBg block w-full p-2.5 dark:bg-transparent dark:border-secondaryTextColor dark:placeholder-neutralTextColor dark:text-neutralTextColor dark:focus:ring-secondaryBg dark:focus:border-secondaryBg dark:shadow-sm-dark"
-            required
             placeholder="jonhdoe@gmail.com"
           />
+          {errors.email && (
+            <p className="text-red-500">{errors.email.message}</p>
+          )}
         </div>
 
         <div className="mb-6">
@@ -58,12 +86,16 @@ export default function Form() {
             Message
           </label>
           <textarea
-            type="message"
-            id="message"
+            {...register("userMessage", {
+              required: "Please enter your message!",
+            })}
+            name="userMessage"
             className="shadow-sm bg-transparent border border-neutralTextColor text-secondaryTextColor text-sm rounded-lg focus:ring-secondaryBg focus:border-secondaryBg block w-full p-2.5 dark:bg-transparent dark:border-secondaryTextColor dark:placeholder-neutralTextColor dark:text-neutralTextColor dark:focus:ring-secondaryBg dark:focus:border-secondaryBg dark:shadow-sm-dark h-[100px] "
-            required
             placeholder="I would like to inquire about"
           />
+          {errors.userMessage && (
+            <p className="text-red-500">{errors.userMessage.message}</p>
+          )}
         </div>
 
         <button

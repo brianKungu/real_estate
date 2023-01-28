@@ -20,7 +20,7 @@ export default function Tabs({
   const innactiveTab =
     "bg-tansparent py-2 px-4 rounded text-secondaryTextColor font-semibold hover:bg-secondaryBg hover:text-primaryTextColor";
   return (
-    <div className="my-6">
+    <div className="my-6 px-4">
       <div className="flex items-center justify-between">
         <button
           className={toggleTab === "description" ? activeTab : innactiveTab}
