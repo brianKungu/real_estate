@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useRef } from "react";
 import { useForm } from "react-hook-form";
+import emailjs from "@emailjs/browser";
 
 export default function Form() {
   const {
@@ -7,12 +8,31 @@ export default function Form() {
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const onSubmit = (data) => console.log(data);
+  const form = useRef();
+
+  const onSubmit = () => {
+    emailjs
+      .sendForm(
+        "service_igr55vr",
+        "template_gbikoc1",
+        form.current,
+        "_nV0JNc8O0COQ0OXO"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
   return (
     <div className="my-4">
       <form
         className="shadow-md shadow-yellow-200 border p-4 border-yellow-200/80 rounded-md"
         onSubmit={handleSubmit(onSubmit)}
+        ref={form}
       >
         <div class="mb-6">
           <label
@@ -29,7 +49,7 @@ export default function Form() {
             type="text"
             name="fullName"
             className="shadow-sm bg-primaryBg border border-neutralTextColor text-secondaryTextColor text-sm rounded-lg focus:ring-secondaryBg focus:border-secondaryBg block w-full p-2.5 dark:bg-primaryBg dark:border-secondaryTextColor dark:placeholder-neutralTextColor dark:text-neutralTextColor dark:focus:ring-secondaryBg dark:focus:border-secondaryBg dark:shadow-sm-dark"
-            placeholder="Sony Bravia"
+            placeholder="John Doe"
           />
           {errors.fullName && (
             <p className="text-red-500">{errors.fullName.message}</p>
