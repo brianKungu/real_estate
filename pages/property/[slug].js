@@ -1,11 +1,12 @@
 import React from "react";
-import { BackButton, Meta } from "../../components";
+import { BackButton, Form, Meta } from "../../components";
 import { useRouter } from "next/router";
 import properties from "../../utils/data";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { FiMapPin } from "react-icons/fi";
 import Tabs from "../../components/Tabs";
+
 
 const responsive = {
   superLargeDesktop: {
@@ -50,7 +51,9 @@ export default function Property() {
           <div className="flex items-center gap-4 md:gap-2 text-neutralTextColor">
             <FiMapPin className="md:w-6 md:h-6" />
 
-            <p className="text-md md:text-lg text-neutralTextColor">{property.location}</p>
+            <p className="text-md md:text-lg text-neutralTextColor">
+              {property.location}
+            </p>
           </div>
         </div>
         <p className="text-xl md:text-3xl font-bold text-secondaryTextColor">
@@ -106,27 +109,9 @@ export default function Property() {
           <h2 className="text-center font-bold text-2xl capitalize text-secondaryTextColor">
             Get more information
           </h2>
+          <Form />
         </div>
       </div>
-      {/* <p>{property.description}</p>
-
-      <ul>
-        {property &&
-          property.features.map((feature, index) => (
-            <li key={index}> {feature.info}</li>
-          ))}
-      </ul>
-      <p>{property.paymentPlan}</p> */}
     </div>
   );
-}
-{
-  /* <div>
-          {property &&
-            property.images.map((image, index) => (
-              <div className="max-w-sm" key={index}>
-                <img src={image.img} alt="property images" />
-              </div>
-            ))}
-        </div> */
 }
