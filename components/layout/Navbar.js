@@ -18,7 +18,7 @@ export default function Navbar() {
     } else if (location.asPath === "/about") {
       setActiveTab("about");
     }
-  });
+  },[location.asPath]);
 
   return (
     <Disclosure
