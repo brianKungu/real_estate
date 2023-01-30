@@ -19,7 +19,6 @@ export default function Home() {
       <Header />
       <PropertyCards />
       <FeaturedProperties />
-      <Tabs />
     </>
   );
 }

@@ -4,7 +4,7 @@ const properties = [
 
     ID: "KH-10154",
     title: "Syokimau 70 by 100",
-    slug: "Syokimau 70 by 100",
+    slug: "Syokimau70by100",
     imageSrc: "/images/image1.jpeg",
     href: "propertyList",
     type: "land",
@@ -12,8 +12,8 @@ const properties = [
     featured: "false",
     latest: "false",
     location: "Syokimau, Nairobi",
-    city: "Nairobi" ,
-    county: "syokimau" ,
+    city: "Nairobi",
+    county: "syokimau",
     neighbourhood: "syokimau",
     price: "3,000,000",
     // address: [

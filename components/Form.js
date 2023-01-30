@@ -6,6 +6,7 @@ export default function Form() {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm();
   const form = useRef();
@@ -21,9 +22,12 @@ export default function Form() {
       .then(
         (result) => {
           console.log(result.text);
+          alert("Message sent successfully");
+          reset();
         },
         (error) => {
-          console.log(error.text);
+          // console.log(error.text);
+          alert(error.text);
         }
       );
   };
