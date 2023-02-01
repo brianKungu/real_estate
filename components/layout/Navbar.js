@@ -18,12 +18,12 @@ export default function Navbar() {
     } else if (location.asPath === "/about") {
       setActiveTab("about");
     }
-  },[location.asPath]);
+  }, [location.asPath]);
 
   return (
     <Disclosure
       as="nav"
-      className="sticky top-0 z-10 w-full my-4 border-b-2 border-opacity-50 bg-primaryBg drop-shadow-md border-neutralBg"
+      className="navbar sticky top-0 w-full my-4 border-b-2 border-opacity-50 bg-primaryBg drop-shadow-md border-neutralBg"
     >
       <div className="max-w-4xl px-4 mx-auto lg:px-6">
         <div className="relative flex items-center justify-center h-16">

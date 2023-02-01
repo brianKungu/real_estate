@@ -1,12 +1,13 @@
-import React from "react";
-import { BackButton, Form, Meta } from "../../components";
+/* eslint-disable react-hooks/rules-of-hooks */
+import React, { useState } from "react";
+import { BackButton, Form, Meta, Modal } from "../../components";
 import { useRouter } from "next/router";
 import properties from "../../utils/data";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { FiMapPin } from "react-icons/fi";
 import Tabs from "../../components/Tabs";
-
+import Link from "next/link";
 
 const responsive = {
   superLargeDesktop: {
@@ -36,7 +37,13 @@ export default function Property() {
     return <div>Property not found</div>;
   }
 
-  console.log(property);
+  // console.log(property);
+  const [clickedImage, setClickedImage] = useState(null);
+  const [currentIndex, setCurrentIndex] = useState(null);
+  const handleClick = (image, index) => {
+    setClickedImage(image.img);
+    setCurrentIndex(index);
+  };
   return (
     <div className="px-4">
       <Meta title={property.title} />
@@ -82,14 +89,21 @@ export default function Property() {
         {property &&
           property.images.map((image, index) => (
             <div className="mr-1" key={index}>
+              {/* <a href={image.img}> */}
               <img
                 src={image.img}
                 alt="property images"
                 className="rounded-md"
+                onClick={() => handleClick(image, index)}
               />
+              {/* </a> */}
             </div>
           ))}
       </Carousel>
+
+      {clickedImage && (
+        <Modal clickedImage={clickedImage} setClickedImage={setClickedImage} />
+      )}
       <div className="md:grid block md:grid-cols-3">
         <div className="col-span-2">
           <Tabs

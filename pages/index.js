@@ -17,7 +17,7 @@ export default function Home() {
     <>
       <Meta title="Home" description="Real Estate Home Page" />
       <Header />
-      <PropertyCards />
+      {/* <PropertyCards /> */}
       <FeaturedProperties />
     </>
   );

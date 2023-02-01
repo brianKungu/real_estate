@@ -26,7 +26,7 @@ export default function PropertyCard({ property }) {
           </h2>
           <div className="flex items-center justify-start space-x-1">
             <FiMapPin />
-            <p>{property.location}</p>
+            <p className="text-sm">{property.location}</p>
           </div>
         </div>
         <p className="md:text-lg font-semibold text-sm">

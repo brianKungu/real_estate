@@ -8,7 +8,7 @@ export default function FeaturedProperties() {
     <div className="px-4 my-8">
       <div className="flex items-center justify-between">
         <h1 className="text-3xl font-bold capitalize text-secondaryTextColor">
-          Our featured properties
+          Our properties
         </h1>
         <Link
           href="propertyList"
