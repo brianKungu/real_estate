@@ -7,14 +7,16 @@ export default function Navbar() {
   const [activeTab, setActiveTab] = useState("Home");
   const location = useRouter();
   const activeLink =
-    "bg-secondaryBg text-primaryTextColor px-3 py-2 rounded-md text-base font-medium mr-4 text-center";
+    "bg-secondaryBg text-primaryTextColor md:px-3 px-2 py-2 rounded-md text-sm md:text-base font-medium mr-2 text-center";
   const innactiveLink =
-    "text-secondaryTextColor hover:bg-neutralBg hover:text-primaryTextColor px-3 py-2 rounded-md text-base font-medium mr-4 text-center";
+    "text-secondaryTextColor hover:bg-neutralBg hover:text-primaryTextColor md:px-3 px-2 py-2 rounded-md text-sm md:text-base font-medium mr-4 text-center";
   useEffect(() => {
     if (location.asPath === "/") {
       setActiveTab("Home");
     } else if (location.asPath === "/propertyList") {
       setActiveTab("propertyList");
+    } else if (location.asPath === "/diaspora") {
+      setActiveTab("diaspora");
     } else if (location.asPath === "/about") {
       setActiveTab("about");
     }
@@ -25,7 +27,7 @@ export default function Navbar() {
       as="nav"
       className="navbar sticky top-0 w-full my-4 border-b-2 border-opacity-50 bg-primaryBg drop-shadow-md border-neutralBg"
     >
-      <div className="max-w-4xl px-4 mx-auto lg:px-6">
+      <div className="max-w-7xl px-4 mx-auto lg:px-6">
         <div className="relative flex items-center justify-center h-16">
           {/* Links */}
           <div className="flex items-center justify-center flex-grow w-full">
@@ -46,6 +48,16 @@ export default function Navbar() {
                 onClick={() => setActiveTab("propertyList")}
               >
                 Property List
+              </Link>
+
+              <Link
+                href="/diaspora"
+                className={
+                  activeTab === "diaspora" ? activeLink : innactiveLink
+                }
+                onClick={() => setActiveTab("diaspora")}
+              >
+                Diaspora
               </Link>
 
               <Link

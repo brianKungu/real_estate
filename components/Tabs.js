@@ -48,7 +48,7 @@ export default function Tabs({
           <p className="my-2 text-neutralTextColor">{description}</p>
         </div>
         <div>
-          <p className="font-bold text-xl">Property Features</p>
+          <p className="font-bold text-xl">Property Features / Amenities</p>
           <ul className="my-2 list-disc list-inside">
             {features &&
               features.map((feature, index) => (
@@ -119,7 +119,10 @@ export default function Tabs({
             <span className="font-semibold tracking-wider text-secondaryTextColor mr-2">
               Property Price:{" "}
             </span>
-            <span className="text-neutralTextColor">{"KSH. "}{price}</span>
+            <span className="text-neutralTextColor">
+              {"KSH. "}
+              {price}
+            </span>
           </div>
         </div>
       </div>

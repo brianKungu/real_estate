@@ -9,8 +9,6 @@ const properties = [
     href: "propertyList",
     type: "land",
     status: "sale",
-    // featured: "false",
-    // latest: "false",
     location: "Syokimau, Nairobi",
     city: "Nairobi",
     county: "syokimau",
@@ -41,8 +39,6 @@ const properties = [
     href: "propertyList",
     type: "Land",
     status: "Sale",
-    featured: "false",
-    latest: "false",
     location: " Landless 2km from Garrisa Highway,9km From Thika CBD",
     city: "Thika",
     county: "Kiambu",
@@ -61,13 +57,15 @@ const properties = [
     description:
       "The 40 X 80 plots are prime  and residential and suitable for immediate settlements, all social amenities available such as water , electricity, schools, Shopping malls, Security Station and a ready developed neighborhood.",
     features: [
-      { info: "Affrodabel Residential 70*100 SqFT" },
-      { info: "Geted community" },
-      { info: "All-Round Perimeter wall" },
+      { info: "Ananas mall " },
+      { info: "Makongeni town center" },
+      { info: "Shell petrol station" },
+      { info: "Thika Army barracks" },
+      { info: "Mount Kenya University" },
     ],
     paymentPlan:
       "Instalment of UpTo 5 months with 50% deposit. contact us for site visits and more information on Salama Estate.",
-  }
+  },
 ];
 
 export default properties;
