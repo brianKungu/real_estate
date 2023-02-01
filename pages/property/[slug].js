@@ -56,9 +56,9 @@ export default function Property() {
             </h1>
           </div>
           <div className="flex items-center gap-4 md:gap-2 text-neutralTextColor">
-            <FiMapPin className="md:w-6 md:h-6" />
+            <FiMapPin className="w-6 h-6 md:w-4 md:h-4" />
 
-            <p className="text-md md:text-lg text-neutralTextColor">
+            <p className="text-sm md:text-lg text-neutralTextColor">
               {property.location}
             </p>
           </div>
