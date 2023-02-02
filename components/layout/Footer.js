@@ -2,6 +2,8 @@ import React from "react";
 import { FiFacebook } from "react-icons/fi";
 import { FaTwitter } from "react-icons/fa";
 import { BsInstagram } from "react-icons/bs";
+import { AiOutlineMail } from "react-icons/ai";
+import { BsTelephoneOutbound } from "react-icons/bs";
 import Image from "next/image";
 
 export default function Footer() {
@@ -31,12 +33,28 @@ export default function Footer() {
         </div>
         <div>
           <h1 className="text-3xl font-bold uppercase">Talk to us</h1>
-          <p className="mt-4 text-neutralTextColor">
-            Lorem ipsum dolor sit amet. Quo cumque voluptas in numquam ipsam sit
-            possimus velit ab nesciunt voluptatum et reiciendis delectus qui
-            ullam obcaecati? Et quis debitis aut fuga amet et facere dolores et
-            odit mollitia id molestiae eaque qui minus porro eum iste Quis.
-          </p>
+
+          <div className="flex items-center space-x-4 my-4 md:my-2 justify-center md:justify-start">
+            <AiOutlineMail className="md:h-6 md:w-6 text-neutralTextColor hover:text-secondaryBg" />
+
+            <a
+              href="mailto:alliedpropertieskenya@gmail.com"
+              className="text-neutralTextColor hover:text-secondaryBg text-base font-semibold"
+            >
+              Allied Properties Kenya
+            </a>
+          </div>
+
+          <div className="flex items-center space-x-4 my-4 md:my-2 justify-center md:justify-start">
+            <BsTelephoneOutbound className="md:h-6 md:w-6 text-neutralTextColor hover:text-secondaryBg" />
+
+            <a
+              href="tel:0748316324"
+              className="text-neutralTextColor hover:text-secondaryBg text-base font-semibold"
+            >
+              0748316324
+            </a>
+          </div>
         </div>
       </div>
       <span className="block mt-4 text-sm text-center text-neutralTextColor md:text-left dark:text-neutralTextColor">

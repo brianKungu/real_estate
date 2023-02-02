@@ -46,7 +46,7 @@ export default function about() {
             <p className="px-4 py-2 rounded-full bg-secondaryBg text-primaryTextColor">
               Contact me
             </p>
-            <a href="https://api.whatsapp.com/send?phone=0759391973">
+            <a href="https://api.whatsapp.com/send?phone=0723942482">
               <FaWhatsapp className="w-8 h-8 text-neutralTextColor hover:text-secondaryBg" />
             </a>
             <a href="#">

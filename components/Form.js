@@ -72,7 +72,7 @@ export default function Form() {
               required: "Please enter your phone number!",
               minLength: { value: 10, message: "Phone Number is too short!" },
             })}
-            type="number"
+            type="tel"
             name="phoneNumber"
             className="shadow-sm bg-transparent border border-neutralTextColor text-secondaryTextColor text-sm rounded-lg focus:ring-secondaryBg focus:border-secondaryBg block w-full p-2.5 dark:bg-transparent dark:border-secondaryTextColor dark:placeholder-neutralTextColor dark:text-neutralTextColor dark:focus:ring-secondaryBg dark:focus:border-secondaryBg dark:shadow-sm-dark"
             placeholder="0722000000"
