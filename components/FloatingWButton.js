@@ -6,7 +6,7 @@ export default function FloatingWButton() {
     <div className="fixed bottom-4 bg-secondaryBg py-2 px-6 mx-4 hover:text-neutralBg rounded-full shadow-md">
       <div className="flex items-center space-x-4 text-primaryTextColor ">
         <FaWhatsapp className="w-8 h-8" />{" "}
-        <a href="https://api.whatsapp.com/send?phone=0723942482">WhatsApp Us</a>
+        <a href="https://api.whatsapp.com/send?phone=+254723942482">WhatsApp Us</a>
       </div>
     </div>
   );

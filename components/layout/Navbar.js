@@ -44,7 +44,7 @@ export default function Navbar() {
           <BsTelephoneOutbound className="md:h-6 md:w-6 text-neutralTextColor hover:text-secondaryBg" />
 
           <a
-            href="tel:0748316324"
+            href="tel:+254748316324"
             className="text-neutralTextColor hover:text-secondaryBg font-semibold"
           >
             0748316324
