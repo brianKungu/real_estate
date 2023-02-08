@@ -98,19 +98,3 @@ export default function Navbar() {
     </Disclosure>
   );
 }
-// {navigation.map((item) => (
-//   <Disclosure.Button
-//     as="a"
-//     key={item.name}
-//     href={item.href}
-//     className={classNames(
-//       item.current
-//         ? "bg-secondaryBg text-primaryTextColor"
-//         : "text-secondaryTextColor hover:bg-neutralBg hover:text-primaryTextColor",
-//       " px-3 py-2 rounded-md text-base font-medium"
-//     )}
-//     aria-current={item.current ? "page" : undefined}
-//   >
-//     {item.name}
-//   </Disclosure.Button>
-// ))}

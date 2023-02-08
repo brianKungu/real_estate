@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { BackButton, Form, Meta, Modal } from "../../components";
 import { useRouter } from "next/router";
-import properties from "../../utils/data";
+// import properties from "../../utils/data";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { FiMapPin } from "react-icons/fi";
@@ -28,14 +28,14 @@ const responsive = {
     items: 1,
   },
 };
-export default function Property() {
-  const { query } = useRouter();
-  const { slug } = query;
-  console.log(slug);
-  const property = properties.find((x) => x.slug === slug);
-  if (!property) {
-    return <div>Property not found</div>;
-  }
+export default function Property({ property }) {
+  // const { query } = useRouter();
+  // const { slug } = query;
+  // console.log(slug);
+  // const property = properties.find((x) => x.slug === slug);
+  // if (!property) {
+  //   return <div>Property not found</div>;
+  // }
 
   // console.log(property);
   const [clickedImage, setClickedImage] = useState(null);
@@ -128,4 +128,35 @@ export default function Property() {
       </div>
     </div>
   );
+}
+
+export async function getStaticProps(context) {
+  const slug = context.params.slug;
+  const results = await fetch(
+    `http://127.0.0.1:8000/properties/api/property/detail?slug=${slug}`
+  );
+
+  const data = await results.json();
+  return {
+    props: {
+      property: data,
+    },
+  };
+}
+
+export async function getStaticPaths() {
+  const data = await fetch("http://127.0.0.1:8000/properties/api/list/all");
+  const properties = await data.json();
+  const paths = properties.map((property) => {
+    return {
+      params: {
+        slug: property.slug,
+      },
+    };
+  });
+
+  return {
+    paths,
+    fallback: false,
+  };
 }

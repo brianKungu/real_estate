@@ -1,24 +1,24 @@
-import Head from "next/head";
-import Image from "next/image";
 import { Inter } from "@next/font/google";
-import styles from "../styles/Home.module.css";
-import { Header, Layout, Meta } from "../components";
-import PrimaryPill from "../components/PrimaryPill";
-import SecondaryPill from "../components/SecondaryPill";
-import PropertyCards from "../components/PropertyCards";
-import PropertyCard from "../components/PropertyCard";
+import { Header, t, Meta } from "../components";
 import FeaturedProperties from "../components/FeaturedProperties";
-import Tabs from "../components/Tabs";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export default function Home() {
+export default function Home({properties}) {
   return (
     <>
       <Meta title="Home" description="Real Estate Home Page" />
       <Header />
-      {/* <PropertyCards /> */}
-      <FeaturedProperties />
+      <FeaturedProperties properties={properties} />
     </>
   );
+}
+
+export async function getStaticProps() {
+  const data = await fetch("http://127.0.0.1:8000/properties/api/list/all");
+  const properties = await data.json();
+  console.log(properties);
+  return {
+    props: { properties },
+  };
 }
