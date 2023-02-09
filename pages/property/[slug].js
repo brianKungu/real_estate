@@ -29,15 +29,7 @@ const responsive = {
   },
 };
 export default function Property({ property }) {
-  // const { query } = useRouter();
-  // const { slug } = query;
-  // console.log(slug);
-  // const property = properties.find((x) => x.slug === slug);
-  // if (!property) {
-  //   return <div>Property not found</div>;
-  // }
 
-  // console.log(property);
   const [clickedImage, setClickedImage] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(null);
   const handleClick = (image, index) => {

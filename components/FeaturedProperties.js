@@ -19,7 +19,7 @@ export default function FeaturedProperties({ properties }) {
           View all
         </Link>
       </div>
-      <div className="grid w-full gap-4 mt-8 md:grid-cols-3">
+      <div className="grid w-full gap-4 mt-8 md:grid-cols-2 lg:grid-cols-3">
         {properties.map((property) => (
           <PropertyCard property={property} key={property.slug}></PropertyCard>
         ))}
