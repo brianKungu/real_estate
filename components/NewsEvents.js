@@ -18,6 +18,7 @@ export default function NewsEvents({ news }) {
               width={500}
               height={500}
               alt="news image"
+              className="rounded-lg"
             />
           </div>
           <div className="col-span-2 my-auto">

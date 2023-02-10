@@ -3,8 +3,10 @@ import { FiFacebook } from "react-icons/fi";
 import { BackButton, Meta } from "../components";
 import { FaTwitter, FaWhatsapp } from "react-icons/fa";
 import { BsInstagram } from "react-icons/bs";
+import Image from "next/image";
+import dynamic from "next/dynamic";
 
-export default function about() {
+const about = () => {
   return (
     <div className="px-4 my-4">
       <Meta
@@ -61,7 +63,10 @@ export default function about() {
           </div>
         </div>
         <div className="order-first my-4 md:my-0 md:order-last">
-          <img
+          <Image
+            width={1000}
+            height={1000}
+            priority="true"
             src="/images/logo.jpeg"
             className="rounded-lg shadow-lg shadow-yellow-200"
             alt="agent photo"
@@ -70,4 +75,6 @@ export default function about() {
       </div>
     </div>
   );
-}
+};
+
+export default dynamic(() => Promise.resolve(about), { ssr: false });

@@ -6,7 +6,7 @@ export default function News({ info }) {
   return (
     <div className="px-4">
       <Meta title={info.title} description={info.title} />
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between my-4">
         <BackButton />
         <div className="flex flex-col">
           <h1 className="font-semibold capitalize text-lg text-right md:text-xl text-secondaryTextColor tracking-wider hover:text-secondaryBg">
@@ -18,9 +18,11 @@ export default function News({ info }) {
       <div>
         <Image
           src={info.cover_image}
-          width={500}
-          height={500}
+          width={1280}
+          height={1000}
           alt="news image"
+          priority="true"
+          className="rounded-md"
         />
         <p className="text-neutralTextColor my-6">{info.description}</p>
       </div>
@@ -30,7 +32,7 @@ export default function News({ info }) {
 export async function getStaticProps(context) {
   const slug = context.params.slug;
   const results = await fetch(
-    `http://127.0.0.1:8000/properties/api/news_events/detail?slug=${slug}`
+    `http://localhost:8000/properties/api/news_events/detail?slug=${slug}`
   );
 
   const data = await results.json();
