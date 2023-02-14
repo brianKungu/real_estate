@@ -72,7 +72,7 @@ export default function diaspora({ news }) {
 
 export async function getStaticProps() {
   const data = await fetch(
-    "http://localhost:8000/properties/api/news_events/list/all"
+    "https://realestatebackendcollab.pythonanywhere.com//properties/api/news_events/list/all"
   );
   const news = await data.json();
   console.log(news);

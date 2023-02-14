@@ -48,7 +48,7 @@ export default function propertyList({ properties }) {
 
 export async function getStaticProps() {
   const properties = await fetch(
-    "http://127.0.0.1:8000/properties/api/list/all"
+    "https://realestatebackendcollab.pythonanywhere.com/properties/api/list/all"
   ).then((r) => r.json());
 
   console.log(properties);
