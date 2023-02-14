@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import PropertyCard from "../components/PropertyCard";
-import properties from "../utils/data";
 import { BackButton, Meta } from "../components";
 import { Select, Space } from "antd";
 
@@ -8,7 +7,7 @@ const handleChange = (value) => {
   console.log(`Selected ${value}`);
 };
 
-export default function propertyList() {
+export default function propertyList({ properties }) {
   return (
     <>
       <Meta
@@ -45,4 +44,15 @@ export default function propertyList() {
       </div>
     </>
   );
+}
+
+export async function getStaticProps() {
+  const properties = await fetch(
+    "https://realestatebackendcollab.pythonanywhere.com/properties/api/list/all"
+  ).then((r) => r.json());
+
+  console.log(properties);
+  return {
+    props: { properties },
+  };
 }

@@ -30,7 +30,7 @@ export default function Navbar() {
       className="navbar sticky top-0 w-full my-4 border-b-2 border-opacity-50 bg-primaryBg drop-shadow-md border-neutralBg"
     >
       <div className="flex space-x-4 items-center justify-center text-sm px-2 lg:px-6">
-        <p className="font-bold">Reach out via:</p>
+        <p className="font-bold hidden md:block">Reach out via:</p>
         <div className="flex items-center space-x-4 justify-center md:justify-start">
           <AiOutlineMail className="md:h-6 md:w-6 text-neutralTextColor hover:text-secondaryBg" />
           <a
@@ -98,19 +98,3 @@ export default function Navbar() {
     </Disclosure>
   );
 }
-// {navigation.map((item) => (
-//   <Disclosure.Button
-//     as="a"
-//     key={item.name}
-//     href={item.href}
-//     className={classNames(
-//       item.current
-//         ? "bg-secondaryBg text-primaryTextColor"
-//         : "text-secondaryTextColor hover:bg-neutralBg hover:text-primaryTextColor",
-//       " px-3 py-2 rounded-md text-base font-medium"
-//     )}
-//     aria-current={item.current ? "page" : undefined}
-//   >
-//     {item.name}
-//   </Disclosure.Button>
-// ))}

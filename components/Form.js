@@ -1,8 +1,10 @@
 import React, { useRef } from "react";
 import { useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
+import axios from "axios";
 
 export default function Form() {
+  const url = "http://localhost:8000/properties/api/contact_us/create";
   const {
     register,
     handleSubmit,
@@ -11,25 +13,28 @@ export default function Form() {
   } = useForm();
   const form = useRef();
 
-  const onSubmit = () => {
-    emailjs
-      .sendForm(
+  const onSubmit = (data) => {
+    try {
+      emailjs.sendForm(
         "service_igr55vr",
         "template_gbikoc1",
         form.current,
         "_nV0JNc8O0COQ0OXO"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-          alert("Message sent successfully");
-          reset();
-        },
-        (error) => {
-          // console.log(error.text);
-          alert(error.text);
-        }
       );
+      axios
+        .post(url, {
+          name: data.fullName,
+          phone: data.phoneNumber,
+          email: data.email,
+          message: data.userMessage,
+        })
+        .then((res) => {
+          alert("message sent successfully");
+        });
+      reset();
+    } catch (error) {
+      console.log(error);
+    }
   };
   return (
     <div className="my-4">

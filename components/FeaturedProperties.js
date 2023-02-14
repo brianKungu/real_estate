@@ -1,9 +1,10 @@
+import axios from "axios";
 import Link from "next/link";
-import React from "react";
-import properties from "../utils/data";
+import React, { useEffect, useState } from "react";
+// import properties from "../utils/data";
 import PropertyCard from "./PropertyCard";
 
-export default function FeaturedProperties() {
+export default function FeaturedProperties({ properties }) {
   return (
     <div className="px-4 my-8">
       <div className="flex items-center justify-between">
@@ -13,12 +14,12 @@ export default function FeaturedProperties() {
         <Link
           href="propertyList"
           passHref
-          className="text-neutralTextColor text-sm md:text-lg"
+          className="text-sm text-neutralTextColor md:text-lg"
         >
           View all
         </Link>
       </div>
-      <div className="grid w-full md:grid-cols-3 gap-4 mt-8">
+      <div className="grid w-full gap-4 mt-8 md:grid-cols-2 lg:grid-cols-3">
         {properties.map((property) => (
           <PropertyCard property={property} key={property.slug}></PropertyCard>
         ))}

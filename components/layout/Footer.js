@@ -5,15 +5,18 @@ import { BsInstagram } from "react-icons/bs";
 import { AiOutlineMail } from "react-icons/ai";
 import { BsTelephoneOutbound } from "react-icons/bs";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
   return (
     <footer className="w-full px-4 my-8 md:mx-auto">
       <div className="w-full gap-4 text-center md:grid md:grid-cols-3 md:text-left text-justified">
         <div>
-          <img
+          <Image
+            width={500}
+            height={500}
             src="/images/logo.jpeg"
-            className="rounded-lg h-[200px] md:w-3/4 w-full object-fit"
+            className="rounded-lg md:w-3/4 w-full object-fit"
             alt="logo"
           />
         </div>
@@ -59,9 +62,9 @@ export default function Footer() {
       </div>
       <span className="block mt-4 text-sm text-center text-neutralTextColor md:text-left dark:text-neutralTextColor">
         ©{" "}
-        <a href="https://flowbite.com/" className="hover:underline">
+        <Link href="/" className="hover:underline">
           Allied Properties
-        </a>
+        </Link>
         . All Rights Reserved.2023
       </span>
     </footer>

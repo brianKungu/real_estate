@@ -3,7 +3,7 @@ import PropertyCard from "./PropertyCard";
 import properties from "../utils/data";
 import Link from "next/link";
 
-export default function PropertyCards() {
+export default function Properties() {
   return (
     <div className="px-4">
       <h1 className="text-3xl font-bold capitalize text-secondaryTextColor">
