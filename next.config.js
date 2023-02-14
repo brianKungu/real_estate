@@ -5,12 +5,14 @@ const nextConfig = {
   optimizeFonts: true,
   images: {
     domains: ["images.unsplash.com"],
+    // domains: ["pythonanywhere.com"],
     remotePatterns: [
       {
-        protocol: "http",
-        hostname: "localhost",
+        protocol: "https",
+        hostname: "realestatebackendcollab.pythonanywhere.com",
       },
     ],
+
     minimumCacheTTL: 1500000,
   },
 };

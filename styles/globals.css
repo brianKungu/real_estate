@@ -28,6 +28,7 @@
   }
   .propertyCardImage {
     transition: 0.5s;
+    height: 300px;
   }
 
   .propertyCardImage:hover {
