@@ -3,6 +3,7 @@ import PrimaryPill from "./PrimaryPill";
 import SecondaryPill from "./SecondaryPill";
 import { FiMapPin } from "react-icons/fi";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function PropertyCard({ property }) {
   return (
