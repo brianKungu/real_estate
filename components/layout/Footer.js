@@ -23,14 +23,35 @@ export default function Footer() {
         <div className="my-4 md:my-0">
           <h1 className="text-3xl font-bold uppercase">Follow us</h1>
           <div className="flex items-center justify-center gap-4 mt-4 md:justify-start">
-            <a href="#">
-              <FaTwitter className="w-8 h-8 text-neutralTextColor hover:text-secondaryBg" />
+            <a href="#" className="hover:opacity-70">
+              <Image
+                src="/icons/twittericon.png"
+                width={48}
+                height={48}
+                alt="Twitter icon"
+              />
             </a>
-            <a hred="#">
-              <FiFacebook className="w-8 h-8 text-neutralTextColor hover:text-secondaryBg" />
+            <a
+              href="https://www.facebook.com/Allied-properties-Ltd-116948054625320/"
+              className="hover:opacity-70"
+            >
+              <Image
+                src="/icons/facebookicon.png"
+                width={48}
+                height={48}
+                alt="Facebook icon"
+              />
             </a>
-            <a hred="#">
-              <BsInstagram className="w-8 h-8 text-neutralTextColor hover:text-secondaryBg" />
+            <a
+              href="https://instagram.com/allied_properties_kenya?igshid=YmMyMTA2M2Y="
+              className="hover:opacity-70"
+            >
+              <Image
+                src="/icons/instagramicon.png"
+                width={48}
+                height={48}
+                alt="Instagram icon"
+              />
             </a>
           </div>
         </div>
@@ -44,7 +65,7 @@ export default function Footer() {
               href="mailto:alliedpropertieskenya@gmail.com"
               className="text-neutralTextColor hover:text-secondaryBg text-base font-semibold"
             >
-              Allied Properties Kenya
+              Allied Properties Kenya@gmail.com
             </a>
           </div>
 
@@ -52,10 +73,10 @@ export default function Footer() {
             <BsTelephoneOutbound className="md:h-6 md:w-6 text-neutralTextColor hover:text-secondaryBg" />
 
             <a
-              href="tel:+254748316324"
+              href="tel:+254723942482"
               className="text-neutralTextColor hover:text-secondaryBg text-base font-semibold"
             >
-              0748316324
+              0723942482
             </a>
           </div>
         </div>

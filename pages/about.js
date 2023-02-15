@@ -14,9 +14,9 @@ const about = () => {
         description="A brief description of who I am and what I do"
       />
       <BackButton />
-      <div className="grid gap-4 md:grid-cols-2 grid-row-2 my-4">
+      <div className="my-4 flex items-center justify-center text-center">
         <div className="my-auto">
-          <h1 className="text-4xl font-bold md:text-4xl  tracking-widest">
+          <h1 className="text-4xl font-bold md:text-4xl tracking-widest">
             Welcome to{" "}
             <span className="text-secondaryBg">Allied Properties,</span> <br />
             The home of value!
@@ -31,7 +31,7 @@ const about = () => {
               connect Kenyans all over the world to affordable properties.
             </p>
             <p className="text-neutralTextColor my-4">
-              At Allied Properties, we assure you of:
+              At <strong>Allied Properties</strong>, we assure you of:
               <ul className="list-disc list-inside">
                 <li>Affordable properties</li>
                 <li>Seamless Conveyance processes</li>
@@ -44,25 +44,54 @@ const about = () => {
               ownership journey
             </p>
           </div>
-          <div className="flex items-center mt-8 space-x-4 justify-center md:justify-start">
+          <div className="flex items-center mt-8 space-x-4 justify-center">
             <p className="px-4 py-2 rounded-full bg-secondaryBg text-primaryTextColor">
-              Contact me
+              Contact us
             </p>
-            <a href="https://api.whatsapp.com/send?phone=+254723942482">
-              <FaWhatsapp className="w-8 h-8 text-neutralTextColor hover:text-secondaryBg" />
+            <a
+              href="https://api.whatsapp.com/send?phone=+254723942482"
+              className="hover:opacity-70"
+            >
+              <Image
+                src="/icons/whatsappicon.png"
+                width={48}
+                height={48}
+                alt="WhatsaApp icon"
+              />
             </a>
-            <a href="#">
-              <FiFacebook className="w-8 h-8 text-neutralTextColor hover:text-secondaryBg" />
+            <a
+              href="https://www.facebook.com/Allied-properties-Ltd-116948054625320/"
+              className="hover:opacity-70"
+            >
+              <Image
+                src="/icons/facebookicon.png"
+                width={48}
+                height={48}
+                alt="Facebook icon"
+              />
             </a>
-            <a href="#">
-              <FaTwitter className="w-8 h-8 text-neutralTextColor hover:text-secondaryBg" />
+            <a href="#" className="hover:opacity-70">
+              <Image
+                src="/icons/twittericon.png"
+                width={48}
+                height={48}
+                alt="Twitter icon"
+              />
             </a>
-            <a href="#">
-              <BsInstagram className="w-8 h-8 text-neutralTextColor hover:text-secondaryBg" />
+            <a
+              href="https://instagram.com/allied_properties_kenya?igshid=YmMyMTA2M2Y="
+              className="hover:opacity-70"
+            >
+              <Image
+                src="/icons/instagramicon.png"
+                width={48}
+                height={48}
+                alt="Instagram icon"
+              />
             </a>
           </div>
         </div>
-        <div className="order-first my-4 md:my-0 md:order-last">
+        {/* <div className="order-first my-4 md:my-0 md:order-last">
           <Image
             width={1000}
             height={1000}
@@ -71,7 +100,7 @@ const about = () => {
             className="rounded-lg shadow-lg shadow-yellow-200"
             alt="agent photo"
           />
-        </div>
+        </div> */}
       </div>
     </div>
   );

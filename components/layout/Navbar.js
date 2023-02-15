@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import { AiOutlineMail } from "react-icons/ai";
 import { BsTelephoneOutbound } from "react-icons/bs";
+import Image from "next/image";
 
 export default function Navbar() {
   const [activeTab, setActiveTab] = useState("Home");
@@ -30,7 +31,6 @@ export default function Navbar() {
       className="navbar sticky top-0 w-full my-4 border-b-2 border-opacity-50 bg-primaryBg drop-shadow-md border-neutralBg"
     >
       <div className="flex space-x-4 items-center justify-center text-sm px-2 lg:px-6">
-        <p className="font-bold hidden md:block">Reach out via:</p>
         <div className="flex items-center space-x-4 justify-center md:justify-start">
           <AiOutlineMail className="md:h-6 md:w-6 text-neutralTextColor hover:text-secondaryBg" />
           <a
@@ -44,10 +44,10 @@ export default function Navbar() {
           <BsTelephoneOutbound className="md:h-6 md:w-6 text-neutralTextColor hover:text-secondaryBg" />
 
           <a
-            href="tel:+254748316324"
+            href="tel:+254723942482"
             className="text-neutralTextColor hover:text-secondaryBg font-semibold"
           >
-            0748316324
+            0723942482
           </a>
         </div>
       </div>
