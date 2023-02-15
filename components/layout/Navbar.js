@@ -32,20 +32,20 @@ export default function Navbar() {
     >
       <div className="flex space-x-4 items-center justify-center text-sm px-2 lg:px-6">
         <div className="flex items-center space-x-4 justify-center md:justify-start">
-          <AiOutlineMail className="md:h-6 md:w-6 text-neutralTextColor hover:text-secondaryBg" />
+          <AiOutlineMail className="md:h-6 md:w-6 text-secondaryBg hover:text-secondaryBg/80" />
           <a
             href="mailto:alliedpropertieskenya@gmail.com"
-            className="text-neutralTextColor hover:text-secondaryBg font-semibold"
+            className="text-secondaryBg hover:text-secondaryBg/80 font-semibold"
           >
             Allied Properties Kenya
           </a>
         </div>
         <div className="flex items-center space-x-4 justify-center md:justify-start">
-          <BsTelephoneOutbound className="md:h-6 md:w-6 text-neutralTextColor hover:text-secondaryBg" />
+          <BsTelephoneOutbound className="md:h-6 md:w-6 text-secondaryBg hover:text-secondaryBg/80" />
 
           <a
             href="tel:+254723942482"
-            className="text-neutralTextColor hover:text-secondaryBg font-semibold"
+            className="text-secondaryBg hover:text-secondaryBg/80 font-semibold"
           >
             0723942482
           </a>

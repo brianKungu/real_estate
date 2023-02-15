@@ -14,7 +14,7 @@ const about = () => {
         description="A brief description of who I am and what I do"
       />
       <BackButton />
-      <div className="my-4 flex items-center justify-center text-center">
+      <div className="my-4 flex items-center justify-center md:text-center text-left">
         <div className="my-auto">
           <h1 className="text-4xl font-bold md:text-4xl tracking-widest">
             Welcome to{" "}
@@ -23,7 +23,7 @@ const about = () => {
             {/* <br /> based in Nairobi */}
           </h1>
           <div className="mt-4">
-            <h3 className="text-2xl text-secondaryTextColor font-semibold">
+            <h3 className="text-2xl text-secondaryTextColor/80 font-bold">
               What we do.
             </h3>
             <p className="mt-2 text-neutralTextColor tracking-wide">
