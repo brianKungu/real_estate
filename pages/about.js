@@ -1,8 +1,5 @@
 import React from "react";
-import { FiFacebook } from "react-icons/fi";
 import { BackButton, Meta } from "../components";
-import { FaTwitter, FaWhatsapp } from "react-icons/fa";
-import { BsInstagram } from "react-icons/bs";
 import Image from "next/image";
 import dynamic from "next/dynamic";
 

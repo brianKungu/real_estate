@@ -2,9 +2,35 @@ import React, { useRef } from "react";
 import { useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
 import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function Form() {
-  const url = "http://localhost:8000/properties/api/contact_us/create";
+  const successNotification = () => {
+    toast.success("Message sent successfully", {
+      position: "top-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
+  };
+
+  const errorNotification = () => {
+    toast.warn("Oopps!! Something went wrong", {
+      position: "top-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
+  };
+  const url =
+    "https://realestatebackendcollab.pythonanywhere.com/properties/api/contact_us/create";
   const {
     register,
     handleSubmit,
@@ -29,11 +55,12 @@ export default function Form() {
           message: data.userMessage,
         })
         .then((res) => {
-          alert("message sent successfully");
+          successNotification();
         });
       reset();
     } catch (error) {
-      console.log(error);
+      // console.log(error);
+      errorNotification();
     }
   };
   return (
@@ -134,6 +161,18 @@ export default function Form() {
           Submit Request
         </button>
       </form>
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored"
+      ></ToastContainer>
     </div>
   );
 }

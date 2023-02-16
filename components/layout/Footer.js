@@ -1,7 +1,4 @@
 import React from "react";
-import { FiFacebook } from "react-icons/fi";
-import { FaTwitter } from "react-icons/fa";
-import { BsInstagram } from "react-icons/bs";
 import { AiOutlineMail } from "react-icons/ai";
 import { BsTelephoneOutbound } from "react-icons/bs";
 import Image from "next/image";
@@ -15,7 +12,7 @@ export default function Footer() {
           <Image
             width={500}
             height={500}
-            src="/images/logo.jpeg"
+            src="/images/logoPNG.png"
             className="rounded-lg md:w-3/4 w-full object-fit"
             alt="logo"
           />
@@ -65,7 +62,7 @@ export default function Footer() {
               href="mailto:alliedpropertieskenya@gmail.com"
               className="text-neutralTextColor hover:text-secondaryBg text-base font-semibold"
             >
-              Allied Properties Kenya@gmail.com
+              Alliedpropertieskenya@gmail.com
             </a>
           </div>
 

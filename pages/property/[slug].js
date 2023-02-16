@@ -1,13 +1,10 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import React, { useState } from "react";
 import { BackButton, Form, Meta, Modal } from "../../components";
-import { useRouter } from "next/router";
-// import properties from "../../utils/data";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { FiMapPin } from "react-icons/fi";
 import Tabs from "../../components/Tabs";
-import Link from "next/link";
 
 const responsive = {
   superLargeDesktop: {
@@ -29,7 +26,6 @@ const responsive = {
   },
 };
 export default function Property({ property }) {
-
   const [clickedImage, setClickedImage] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(null);
   const handleClick = (image, index) => {
@@ -81,14 +77,12 @@ export default function Property({ property }) {
         {property &&
           property.images.map((image, index) => (
             <div className="mr-1" key={index}>
-              {/* <a href={image.img}> */}
               <img
                 src={image.img}
                 alt="property images"
                 className="rounded-md"
                 onClick={() => handleClick(image, index)}
               />
-              {/* </a> */}
             </div>
           ))}
       </Carousel>
@@ -105,7 +99,7 @@ export default function Property({ property }) {
             city={property.city}
             county={property.county}
             neighbourhood={property.neighbourhood}
-            proppertyID={property.ID}
+            propertyID={property.property_id}
             type={property.type}
             status={property.status}
             price={property.price}
@@ -137,7 +131,9 @@ export async function getStaticProps(context) {
 }
 
 export async function getStaticPaths() {
-  const data = await fetch("https://realestatebackendcollab.pythonanywhere.com/properties/api/list/all");
+  const data = await fetch(
+    "https://realestatebackendcollab.pythonanywhere.com/properties/api/list/all"
+  );
   const properties = await data.json();
   const paths = properties.map((property) => {
     return {

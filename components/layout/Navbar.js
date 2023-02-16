@@ -4,7 +4,6 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import { AiOutlineMail } from "react-icons/ai";
 import { BsTelephoneOutbound } from "react-icons/bs";
-import Image from "next/image";
 
 export default function Navbar() {
   const [activeTab, setActiveTab] = useState("Home");
@@ -31,17 +30,17 @@ export default function Navbar() {
       className="navbar sticky top-0 w-full my-4 border-b-2 border-opacity-50 bg-primaryBg drop-shadow-md border-neutralBg"
     >
       <div className="flex space-x-4 items-center justify-center text-sm px-2 lg:px-6">
-        <div className="flex items-center space-x-4 justify-center md:justify-start">
-          <AiOutlineMail className="md:h-6 md:w-6 text-secondaryBg hover:text-secondaryBg/80" />
+        <div className="flex items-center space-x-2 justify-center">
+          <AiOutlineMail className="text-secondaryBg hover:text-secondaryBg/80" />
           <a
             href="mailto:alliedpropertieskenya@gmail.com"
             className="text-secondaryBg hover:text-secondaryBg/80 font-semibold"
           >
-            Allied Properties Kenya
+            Alliedpropertieskenya@gmail.com
           </a>
         </div>
-        <div className="flex items-center space-x-4 justify-center md:justify-start">
-          <BsTelephoneOutbound className="md:h-6 md:w-6 text-secondaryBg hover:text-secondaryBg/80" />
+        <div className="flex items-center space-x-2 justify-center">
+          <BsTelephoneOutbound className="text-secondaryBg hover:text-secondaryBg/80" />
 
           <a
             href="tel:+254723942482"

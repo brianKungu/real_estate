@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Property from "../pages/property/[slug]";
 
 export default function Tabs({
   description,
@@ -8,7 +7,7 @@ export default function Tabs({
   city,
   county,
   neighbourhood,
-  proppertyID,
+  propertyID,
   type,
   status,
   price,
@@ -99,7 +98,7 @@ export default function Tabs({
             <span className="font-semibold tracking-wider text-secondaryTextColor mr-2">
               Property ID:{" "}
             </span>
-            <span className="text-neutralTextColor">{proppertyID}</span>
+            <span className="text-neutralTextColor">{propertyID}</span>
           </div>
           <div>
             <span className="font-semibold tracking-wider text-secondaryTextColor mr-2">
