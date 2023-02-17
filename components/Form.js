@@ -42,10 +42,10 @@ export default function Form() {
   const onSubmit = (data) => {
     try {
       emailjs.sendForm(
-        "service_igr55vr",
-        "template_gbikoc1",
+        "service_7oyxh8v",
+        "template_ql8vzvn",
         form.current,
-        "_nV0JNc8O0COQ0OXO"
+        "5IOX95MJJevu_GH7M"
       );
       axios
         .post(url, {
