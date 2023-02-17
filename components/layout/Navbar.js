@@ -46,7 +46,7 @@ export default function Navbar() {
             href="tel:+254723942482"
             className="text-secondaryBg hover:text-secondaryBg/80 font-semibold"
           >
-            0723942482
+            +254723942482
           </a>
         </div>
       </div>
