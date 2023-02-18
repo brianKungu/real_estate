@@ -27,34 +27,34 @@ export default function Navbar() {
   return (
     <Disclosure
       as="nav"
-      className="navbar sticky top-0 w-full my-4 border-b-2 border-opacity-50 bg-primaryBg drop-shadow-md border-neutralBg"
+      className="sticky top-0 w-full my-4 border-b-2 border-opacity-50 navbar bg-primaryBg drop-shadow-md border-neutralBg"
     >
-      <div className="flex space-x-4 items-center justify-center text-sm px-2 lg:px-6">
-        <div className="flex items-center space-x-2 justify-center">
-          <AiOutlineMail className="text-secondaryBg hover:text-secondaryBg/80" />
+      <div className="flex items-center justify-center px-2 mx-auto space-x-2 text-sm md:space-x-4 lg:px-6">
+        <div className="flex items-center justify-center space-x-2">
+          <AiOutlineMail className="hidden text-secondaryBg hover:text-secondaryBg/80 md:flex" />
           <a
             href="mailto:alliedpropertieskenya@gmail.com"
-            className="text-secondaryBg hover:text-secondaryBg/80 font-semibold"
+            className="font-semibold text-secondaryBg hover:text-secondaryBg/80"
           >
             Alliedpropertieskenya@gmail.com
           </a>
         </div>
-        <div className="flex items-center space-x-2 justify-center">
-          <BsTelephoneOutbound className="text-secondaryBg hover:text-secondaryBg/80" />
+        <div className="flex items-center justify-center space-x-2">
+          <BsTelephoneOutbound className="hidden text-secondaryBg hover:text-secondaryBg/80 md:flex" />
 
           <a
             href="tel:+254723942482"
-            className="text-secondaryBg hover:text-secondaryBg/80 font-semibold"
+            className="font-semibold text-secondaryBg hover:text-secondaryBg/80"
           >
             +254723942482
           </a>
         </div>
       </div>
-      <div className="max-w-7xl px-4 mx-auto lg:px-6">
+      <div className="px-4 mx-auto max-w-7xl lg:px-6">
         <div className="relative flex items-center justify-center h-16">
           {/* Links */}
           <div className="flex items-center justify-center flex-grow w-full">
-            <div className="flex items-center justify-center text-center w-full">
+            <div className="flex items-center justify-center w-full text-center">
               <Link
                 href="/"
                 className={activeTab === "Home" ? activeLink : innactiveLink}
