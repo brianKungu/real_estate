@@ -119,7 +119,7 @@ export default function Property({ property }) {
 export async function getStaticProps(context) {
   const slug = context.params.slug;
   const results = await fetch(
-    `https://realestatebackendcollab.pythonanywhere.com/properties/api/property/detail?slug=${slug}`
+    `https://backend.alliedproperties.co.ke/properties/api/property/detail?slug=${slug}`
   );
 
   const data = await results.json();
@@ -132,7 +132,7 @@ export async function getStaticProps(context) {
 
 export async function getStaticPaths() {
   const data = await fetch(
-    "https://realestatebackendcollab.pythonanywhere.com/properties/api/list/all"
+    "https://backend.alliedproperties.co.ke/properties/api/list/all"
   );
   const properties = await data.json();
   const paths = properties.map((property) => {

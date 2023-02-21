@@ -4,12 +4,10 @@ const nextConfig = {
   swcMinify: true,
   optimizeFonts: true,
   images: {
-    domains: ["images.unsplash.com"],
-    // domains: ["pythonanywhere.com"],
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "realestatebackendcollab.pythonanywhere.com",
+        hostname: "backend.alliedproperties.co.ke",
       },
     ],
 

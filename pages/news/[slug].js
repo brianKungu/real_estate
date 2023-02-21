@@ -32,7 +32,7 @@ export default function News({ info }) {
 export async function getStaticProps(context) {
   const slug = context.params.slug;
   const results = await fetch(
-    `https://realestatebackendcollab.pythonanywhere.com/api/news_events/detail?slug=${slug}`
+    `https://backend.alliedproperties.co.ke/api/news_events/detail?slug=${slug}`
   );
 
   const data = await results.json();
@@ -45,7 +45,7 @@ export async function getStaticProps(context) {
 
 export async function getStaticPaths() {
   const data = await fetch(
-    "https://realestatebackendcollab.pythonanywhere.com/properties/api/news_events/list/all"
+    "https://backend.alliedproperties.co.ke/properties/api/news_events/list/all"
   );
   const news = await data.json();
   const paths = await news.map((info) => {

@@ -48,7 +48,7 @@ export default function propertyList({ properties }) {
 
 export async function getStaticProps() {
   const properties = await fetch(
-    "https://realestatebackendcollab.pythonanywhere.com/properties/api/list/all"
+    "https://backend.alliedproperties.co.ke/properties/api/list/all"
   ).then((r) => r.json());
 
   console.log(properties);
