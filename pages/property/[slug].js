@@ -53,7 +53,7 @@ export default function Property({ property }) {
         </div>
         <p className="text-xl md:text-3xl font-bold text-secondaryTextColor">
           {"KSH."}
-          {property.price}
+          {property.price.toLocaleString()}
         </p>
       </div>
       <Carousel
@@ -102,7 +102,7 @@ export default function Property({ property }) {
             propertyID={property.property_id}
             type={property.type}
             status={property.status}
-            price={property.price}
+            price={property.price.toLocaleString()}
           />
         </div>
         <div className="my-6">

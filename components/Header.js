@@ -5,22 +5,22 @@ import Image from "next/image";
 const images = [
   {
     imageID: 1,
-    imageSrc: "/images/siama1.jpeg",
+    imageSrc: "/images/jabali5.jpeg",
     imageAlt: "Property image",
   },
   {
     imageID: 2,
-    imageSrc: "/images/siama2.jpeg",
+    imageSrc: "/images/jabali1.jpeg",
     imageAlt: "Property image",
   },
   {
     imageID: 3,
-    imageSrc: "/images/siama3.jpeg",
+    imageSrc: "/images/jabali2.jpeg",
     imageAlt: "Property image",
   },
   {
     imageID: 4,
-    imageSrc: "/images/siama4.jpeg",
+    imageSrc: "/images/siama1.jpeg",
     imageAlt: "Property image",
   },
 ];
