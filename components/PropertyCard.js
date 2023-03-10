@@ -11,7 +11,7 @@ export default function PropertyCard({ property }) {
       <Link href={`/property/${property.slug}`} passHref>
         <img
           src={property.imageSrc}
-          className="propertyCardImage"
+          className="propertyCardImage w-full"
           alt="property image"
         />
       </Link>
@@ -20,7 +20,7 @@ export default function PropertyCard({ property }) {
         <SecondaryPill text={property.type} />
       </div>
 
-      <div className="absolute bottom-0 flex items-center justify-between w-full p-4 mx-auto text-white">
+      <div className="absolute bottom-0 flex items-center justify-between w-full p-4 mx-auto text-white bg-gradient-to-t from-gray-900/40 to-gray-500/40 blur-md hover:blur-lg">
         <div className="flex flex-col">
           <h2 className="text-md md:text-lg font-bold drop-shadow-sm">
             {property.title}

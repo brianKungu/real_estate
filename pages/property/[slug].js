@@ -5,7 +5,7 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { FiMapPin } from "react-icons/fi";
 import Tabs from "../../components/Tabs";
-
+import Image from "next/image";
 const responsive = {
   superLargeDesktop: {
     // the naming can be any, depends on you.
@@ -80,7 +80,7 @@ export default function Property({ property }) {
               <img
                 src={image.img}
                 alt="property images"
-                className="rounded-md"
+                className="rounded-md h-[300px] w-full"
                 onClick={() => handleClick(image, index)}
               />
             </div>
