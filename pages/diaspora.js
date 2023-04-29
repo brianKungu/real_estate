@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect} from "react";
 import { Carousel } from "antd";
 import { BackButton, Meta, NewsEvents } from "../components";
 import Image from "next/image";
