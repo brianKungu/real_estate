@@ -2,16 +2,12 @@ import React, { useEffect } from "react";
 import PropertyCard from "../components/PropertyCard";
 import { BackButton, Meta } from "../components";
 import { Select, Space } from "antd";
-import ReactGA from "react-ga";
 
 const handleChange = (value) => {
   console.log(`Selected ${value}`);
 };
 
 export default function PropertyList({ properties }) {
-  useEffect(() => {
-    ReactGA.pageview(window.location.pathname);
-  }, []);
   return (
     <>
       <Meta

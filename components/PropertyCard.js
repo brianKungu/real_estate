@@ -4,11 +4,18 @@ import SecondaryPill from "./SecondaryPill";
 import { FiMapPin } from "react-icons/fi";
 import Link from "next/link";
 import Image from "next/image";
+import va from "@vercel/analytics";
 
 export default function PropertyCard({ property }) {
   return (
     <div className="relative md:max-w-md overflow-hidden rounded-md">
-      <Link href={`/property/${property.slug}`} passHref>
+      <Link
+        href={`/property/${property.slug}`}
+        passHref
+        onClick={() => {
+          va.track("individual property", { location: "product card" });
+        }}
+      >
         <img
           src={property.imageSrc}
           className="propertyCardImage w-full"

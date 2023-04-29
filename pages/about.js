@@ -2,12 +2,9 @@ import React from "react";
 import { BackButton, Meta } from "../components";
 import Image from "next/image";
 import dynamic from "next/dynamic";
-import ReactGA from "react-ga";
 
 const About = () => {
-  useEffect(() => {
-    ReactGA.pageview(window.location.pathname);
-  }, []);
+  
   return (
     <div className="px-4 my-4">
       <Meta

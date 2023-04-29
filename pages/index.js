@@ -4,15 +4,9 @@ import { Header, t, Meta } from "../components";
 import FeaturedProperties from "../components/FeaturedProperties";
 import { NextSeo } from "next-seo";
 const inter = Inter({ subsets: ["latin"] });
-import ReactGA from "react-ga";
-
-const TRACKING_ID = "G-56ZJY3VZC7";
-ReactGA.initialize(TRACKING_ID);
 
 export default function Home({ properties }) {
-  useEffect(() => {
-    ReactGA.pageview(window.location.pathname);
-  }, []);
+  
   return (
     <>
       <Meta

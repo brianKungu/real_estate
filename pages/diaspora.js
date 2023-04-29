@@ -2,7 +2,6 @@ import React,{useEffect} from "react";
 import { Carousel } from "antd";
 import { BackButton, Meta, NewsEvents } from "../components";
 import Image from "next/image";
-import ReactGA from "react-ga";
 
 const images = [
   {
@@ -23,9 +22,7 @@ const images = [
 ];
 
 export default function Diaspora({ news }) {
-  useEffect(() => {
-    ReactGA.pageview(window.location.pathname);
-  }, []);
+
   return (
     <>
       <Meta title="Diaspora" description="Diaspora Properties" />
