@@ -9,18 +9,18 @@ import Script from "next/script";
 export default function App({ Component, pageProps }) {
   const router = useRouter();
   useEffect(() => {
-    const handleRouterChange = (url) => {
+    const handleRouteChange = (url) => {
       gtag.pageview(url);
     };
-    router.events.on("routeChangeComplete", "handleRouterChange");
-
+    router.events.on("routeChangeComplete", handleRouteChange);
     return () => {
-      router.events.off("routerChangeComplete", handleRouterChange);
+      router.events.off("routeChangeComplete", handleRouteChange);
     };
   }, [router.events]);
   return (
     <>
       <Script
+        strategy="afterInteractive"
         async
         src="https://www.googletagmanager.com/gtag/js?id=G-56ZJY3VZC7"
       />
