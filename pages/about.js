@@ -2,8 +2,12 @@ import React from "react";
 import { BackButton, Meta } from "../components";
 import Image from "next/image";
 import dynamic from "next/dynamic";
+import ReactGA from "react-ga";
 
-const about = () => {
+const About = () => {
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname);
+  }, []);
   return (
     <div className="px-4 my-4">
       <Meta
@@ -88,19 +92,9 @@ const about = () => {
             </a>
           </div>
         </div>
-        {/* <div className="order-first my-4 md:my-0 md:order-last">
-          <Image
-            width={1000}
-            height={1000}
-            priority="true"
-            src="/images/logo.jpeg"
-            className="rounded-lg shadow-lg shadow-yellow-200"
-            alt="agent photo"
-          />
-        </div> */}
       </div>
     </div>
   );
 };
 
-export default dynamic(() => Promise.resolve(about), { ssr: false });
+export default dynamic(() => Promise.resolve(About), { ssr: false });

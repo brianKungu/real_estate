@@ -1,11 +1,13 @@
 /* eslint-disable react-hooks/rules-of-hooks */
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { BackButton, Form, Meta, Modal } from "../../components";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { FiMapPin } from "react-icons/fi";
 import Tabs from "../../components/Tabs";
 import Image from "next/image";
+import ReactGA from "react-ga";
+
 const responsive = {
   superLargeDesktop: {
     // the naming can be any, depends on you.
@@ -32,6 +34,9 @@ export default function Property({ property }) {
     setClickedImage(image.img);
     setCurrentIndex(index);
   };
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname);
+  }, []);
   return (
     <div className="px-4">
       <Meta title={property.title} />
