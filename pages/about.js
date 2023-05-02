@@ -4,7 +4,6 @@ import Image from "next/image";
 import dynamic from "next/dynamic";
 
 const About = () => {
-  
   return (
     <div className="px-4 my-4">
       <Meta
@@ -30,13 +29,13 @@ const About = () => {
             </p>
             <p className="text-neutralTextColor my-4">
               At <strong>Allied Properties</strong>, we assure you of:
-              <ul className="list-disc list-inside">
-                <li>Affordable properties</li>
-                <li>Seamless Conveyance processes</li>
-                <li>Unbeatable value for money</li>
-                <li>Flexible payment terms</li>
-              </ul>
             </p>
+            <ul className="list-disc list-inside">
+              <li>Affordable properties</li>
+              <li>Seamless Conveyance processes</li>
+              <li>Unbeatable value for money</li>
+              <li>Flexible payment terms</li>
+            </ul>
             <p className="text-neutralTextColor">
               Do engage us for the ultimate VVIP experience on your property
               ownership journey
