@@ -26,8 +26,7 @@ export async function getStaticProps() {
     "https://backend.alliedproperties.co.ke/properties/api/list/all"
   );
   const properties = await data.json();
-  console.log(properties);
-  console.log(process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS);
+
   return {
     props: { properties },
     revalidate: 60,
